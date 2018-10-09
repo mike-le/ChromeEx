@@ -3,13 +3,8 @@ walk(document.body);
 function walk(node) 
 {
     //Inspired by https://github.com/panicsteve/cloud-to-butt
-	var child, next;
-	
-	if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea'
-	    || node.classList.indexOf('ace_editor') > -1) {
-		return;
-	}
-
+    var child, next;
+    
 	switch ( node.nodeType )  
 	{
 		case 1:  // Element
