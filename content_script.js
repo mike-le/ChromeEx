@@ -3,7 +3,7 @@ walk(document.body);
 function walk(node) 
 {
     //Inspired by https://github.com/panicsteve/cloud-to-butt
-    var child, next;
+	var child, next;
     
 	switch ( node.nodeType )  
 	{
@@ -28,9 +28,11 @@ function walk(node)
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
+	var word = chrome.storage.local.get([v], function(){});
 
-	v = v.replace(/\bword\b/g, "kotoba");
-	v = v.replace(/\bWord\b/g, "言葉");
-	
+	if(word != null){
+		v = v.replace(/\bword\b/g, word);
+	}
+
 	textNode.nodeValue = v;
 }

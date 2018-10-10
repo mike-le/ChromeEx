@@ -4,15 +4,19 @@
     "description": "Learn a Language at Your Pace",
     "version": "1",
     "author": "Michael Le",
-   "browser_action": {
-      "default_title": "Kotoba"
+    "browser_action": {
+      "default_title": "Kotoba",
+      "default_popup": "popup.html"
     },
-   "content_scripts": 
-	[
-		{
-			"matches": ["*://*/*"],
-			"js": ["content_script.js"],
-			"run_at": "document_end"
-		}
-	]
+    "permissions": [
+      "storage"
+    ],
+    "content_scripts": 
+    [
+      {
+        "matches": ["*://*/*"],
+        "js": ["content_script.js"],
+        "run_at": "document_end"
+      }
+    ]
 }
