@@ -28,10 +28,18 @@ function walk(node)
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
-	var word = chrome.storage.local.get([v], function(){});
+	var word;
+	chrome.storage.sync.get(v, function(obj){
+		word = obj;
+	});
+
+	//alert(word);
+	console.log("word: " + word);
+	console.log("v: " + v);
 
 	if(word != null){
-		v = v.replace(/\bword\b/g, word);
+		console.log("We made it!");
+		v = v.replace(/\b[v]\b/g, word);
 	}
 
 	textNode.nodeValue = v;
