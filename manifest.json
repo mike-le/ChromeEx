@@ -18,8 +18,9 @@
     [
       {
         "matches": ["*://*/*"],
-        "js": ["content_script.js"],
+        "js": ["content_script.js", "popup.js"],
         "run_at": "document_end"
       }
     ]
+
 }
