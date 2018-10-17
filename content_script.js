@@ -28,12 +28,11 @@ function walk(node)
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
+	//alert(v);
 	var word;
-	chrome.storage.sync.get(v, function(obj){
-		word = obj;
-	});
 
-	//alert(word);
+	getValue(v, function (value) {word = value}); 
+
 	console.log("word: " + word);
 	console.log("v: " + v);
 
@@ -44,3 +43,7 @@ function handleText(textNode)
 
 	textNode.nodeValue = v;
 }
+
+function getValue(v, callback) {
+	chrome.storage.sync.get(v, callback);
+  }
