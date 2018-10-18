@@ -8,13 +8,10 @@ function addNewWord() {
     var orgWord = document.getElementById('org').value;
     var newWord = document.getElementById('new').value;
 
-    alert(orgWord);
-    alert(newWord);
+    var save = {};
+    save[orgWord] = newWord;
 
-    chrome.storage.sync.set({ [orgWord] : [newWord] }, function(){
-        alert('translated');
-        console.log('Saved: ' + orgWord + '=>' + newWord);
-    });
+    chrome.storage.sync.set(save);
 
     return false;
 } 

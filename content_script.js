@@ -4,7 +4,6 @@ function walk(node)
 {
     //Inspired by https://github.com/panicsteve/cloud-to-butt
 	var child, next;
-    
 	switch ( node.nodeType )  
 	{
 		case 1:  // Element
@@ -25,25 +24,22 @@ function walk(node)
 	}
 }
 
-function handleText(textNode) 
-{
+function handleText(textNode) {
 	var v = textNode.nodeValue;
-	//alert(v);
-	var word;
 
-	getValue(v, function (value) {word = value}); 
-
-	console.log("word: " + word);
-	console.log("v: " + v);
-
-	if(word != null){
-		console.log("We made it!");
-		v = v.replace(/\b[v]\b/g, word);
-	}
-
-	textNode.nodeValue = v;
+	getValue(v, function (value) {
+		if(v == "word") console.log(value[v]);
+		var word = value;
+		if(word[v].length > 0){
+			console.log(word[v]);
+			var regex = new RegExp(v,"g");
+			v = v.replace(regex, word[v]);
+			textNode.nodeValue = v;
+		}
+		
+	}); 
 }
 
-function getValue(v, callback) {
-	chrome.storage.sync.get(v, callback);
+function getValue(word, callback) {
+	chrome.storage.sync.get(word, callback);
   }
