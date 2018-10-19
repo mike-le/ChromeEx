@@ -32,14 +32,13 @@ function handleText(textNode) {
 		var word = value;
 		if(word[v].length > 0){
 			console.log(word[v]);
-			var regex = new RegExp(v,"g");
+			var regex = new RegExp(v,"gi");
 			v = v.replace(regex, word[v]);
 			textNode.nodeValue = v;
 		}
-		
 	}); 
 }
 
 function getValue(word, callback) {
 	chrome.storage.sync.get(word, callback);
-  }
+}
