@@ -2,7 +2,6 @@ walk(document.body);
 
 function walk(node) 
 {
-    //Inspired by https://github.com/panicsteve/cloud-to-butt
 	var child, next;
 
 	switch ( node.nodeType )  

@@ -6,28 +6,22 @@ function addNewWord() {
     
     var orgWord = document.getElementById('org').value;
     var newWord = document.getElementById('new').value;
-    var save = {};
-
-    save[orgWord] = newWord;
-
-    if(orgWord[0] == orgWord[0].toUpperCase()){
-        orgWord = decapitalizeFirstLetter(orgWord);
-        newWord = decapitalizeFirstLetter(newWord);
-    } else {
-        orgWord = capitalizeFirstLetter(orgWord);
-        newWord = capitalizeFirstLetter(newWord);
-    }
     
-    save[orgWord] = newWord;
+    var save = {};
+    save[decapitalize(orgWord)] = decapitalize(newWord);
+    save[capitalize(orgWord)] = decapitalize(newWord);
+    save[decapitalize(orgWord+'s')] = decapitalize(newWord);
+    save[capitalize(orgWord+'s')] = decapitalize(newWord);
+
     chrome.storage.sync.set(save);
 
     return false;
 } 
 
-function capitalizeFirstLetter(string) {
+function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function decapitalizeFirstLetter(string) {
+function decapitalize(string) {
     return string.charAt(0).toLowerCase() + string.slice(1);
 }
