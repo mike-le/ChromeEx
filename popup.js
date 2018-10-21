@@ -10,7 +10,7 @@ function addNewWord() {
     save[decapitalize(orgWord)] = decapitalize(newWord);
     save[capitalize(orgWord)] = capitalize(newWord);
     save[decapitalize(orgWord+'s')] = decapitalize(newWord);
-    save[capitalize(orgWord+'s')] = decapitalize(newWord);
+    save[capitalize(orgWord+'s')] = capitalize(newWord);
 
     chrome.storage.sync.set(save);
 

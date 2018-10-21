@@ -28,7 +28,7 @@ function handleText(textNode) {
 	var v = textNode.nodeValue;
 
 	getValue(v, function (word) {
-		if(word[v].length > 0){
+		if(word.hasOwnProperty(v)){
 			var regex = new RegExp(v,"gi");
 			v = v.replace(regex, word[v]);
 			textNode.nodeValue = v;
