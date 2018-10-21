@@ -4,6 +4,7 @@ function walk(node)
 {
     //Inspired by https://github.com/panicsteve/cloud-to-butt
 	var child, next;
+
 	switch ( node.nodeType )  
 	{
 		case 1:  // Element
@@ -27,11 +28,8 @@ function walk(node)
 function handleText(textNode) {
 	var v = textNode.nodeValue;
 
-	getValue(v, function (value) {
-		if(v == "word") console.log(value[v]);
-		var word = value;
+	getValue(v, function (word) {
 		if(word[v].length > 0){
-			console.log(word[v]);
 			var regex = new RegExp(v,"gi");
 			v = v.replace(regex, word[v]);
 			textNode.nodeValue = v;

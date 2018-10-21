@@ -14,6 +14,9 @@
         input#save {
             font-weight: bold; width: auto;
         }
+        #submit{
+            position: relative; float: right;
+        }
     </style>
     <script src="popup.js"></script>
 </head>
@@ -28,7 +31,8 @@
             <input type="text" id="new" name="new" size="25" value="" />
         </p>
         <p>
-            <input type="submit" value="Submit" id="submit"/>
+            <button value="list" id="list">Show All Words</button>
+            <button type="submit" value="Submit" id="submit">Submit</button>
         </p>
         <script src="popup.js"></script>
     </form>
