@@ -1,7 +1,6 @@
 document.getElementById("submit").addEventListener("click", addNewWord);
 
 function addNewWord() {
-    // Cancel the form submit
     event.preventDefault();
     
     var orgWord = document.getElementById('org').value;
@@ -9,7 +8,7 @@ function addNewWord() {
     
     var save = {};
     save[decapitalize(orgWord)] = decapitalize(newWord);
-    save[capitalize(orgWord)] = decapitalize(newWord);
+    save[capitalize(orgWord)] = capitalize(newWord);
     save[decapitalize(orgWord+'s')] = decapitalize(newWord);
     save[capitalize(orgWord+'s')] = decapitalize(newWord);
 
