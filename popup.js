@@ -13,7 +13,7 @@ function addNewWord() {
     save[capitalize(orgWord+'s')] = capitalize(newWord);
 
     chrome.storage.sync.set(save);
-
+    close();
     return false;
 } 
 
