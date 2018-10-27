@@ -14,7 +14,7 @@ function addNewWord() {
 
     chrome.storage.sync.set(save);
     close();
-    return false;
+    return true;
 } 
 
 function capitalize(string) {
