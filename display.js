@@ -1,12 +1,10 @@
 document.getElementById("list").addEventListener("click", display);
 
 function display() {
+	event.preventDefault();
     getValue(function (items) {
 		var myjson = JSON.stringify(items, null, 2);
-		var x = window.open();
-		x.document.open();
-		x.document.write('<html><body><pre>' + myjson + '</pre></body></html>');
-		x.document.close();
+		window.open('about:blank').document.body.innerText += myjson;
 	}); 
 }
 
