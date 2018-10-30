@@ -1,4 +1,5 @@
 document.getElementById("submit").addEventListener("click", addNewWord);
+document.getElementById("remove").addEventListener("click", showWords);
 
 function addNewWord() {
     event.preventDefault();
@@ -17,6 +18,16 @@ function addNewWord() {
     return true;
 } 
 
+function showWords(){
+    e.preventDefault();
+    var x = document.getElementById("dictionary");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+    
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }

@@ -2,6 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("remove").click(function(){
+                $("dictionary").toggle();
+            });
+        });
+    </script>
 </head>
 <body>
     <form id="addNewWord">
@@ -15,10 +23,14 @@
         </p>
         <p>
             <button value="list" id="list">Show All Words</button>
+            <button value="remove" id="remove">Remove</button>
             <button type="submit" value="Submit" id="submit">Submit</button>
         </p>
         <script src="popup.js"></script>
         <script src="display.js"></script>
     </form>
+    <div id="dictionary">
+        Display Dictionary
+    </div>
 </body>
 </html>
