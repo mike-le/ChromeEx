@@ -16,3 +16,7 @@ input#save {
 #submit{
     position: relative; float: right;
 }
+
+#dictionary{
+    display: none;
+}
