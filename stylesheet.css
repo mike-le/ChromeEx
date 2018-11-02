@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
 body{
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 .header{
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
     text-align: center;
     display: block;
     font-weight: bold;
@@ -25,9 +29,16 @@ input#save {
 }
 
 #dictionary{
-    display: none;
-    max-height: 200px;
+    max-height: 0px;
     overflow:auto;
+
+    /* Dropdown animation */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
 }
 
 row{
@@ -49,6 +60,7 @@ ul{
     margin-top: 0px;
 }
 
+/* Scroll bar animations */
 ::-webkit-scrollbar {
     width: 5px;
 }

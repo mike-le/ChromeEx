@@ -28,10 +28,12 @@ getValue(function (items) {
 function showWords(){
     event.preventDefault();
     var x = document.getElementById("dictionary");
-    if (x.style.display != "block") {
-        x.style.display = "block";
+    if (x.style.opacity != 1) {
+        x.style.opacity = 1;
+        x.style.minHeight = "200px";
     } else {
-        x.style.display = "none";
+        x.style.opacity = 0;
+        x.style.minHeight = "0px";
     }
 }
 
