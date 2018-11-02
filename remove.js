@@ -14,7 +14,7 @@ getValue(function (items) {
             var label = document.createElement("label");
             var input = document.createElement("input");
             input.type = "checkbox";
-            input.className = "checkbox";
+            label.id = "checkbox";
             
             
             label.appendChild(input);

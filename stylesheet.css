@@ -18,9 +18,24 @@ input#save {
 
 #dictionary{
     display: none;
+    max-height: 200px;
+    overflow:auto;
 }
 
 row{
     float: left;
     margin-top: 5px;
+}
+
+#checkbox{
+    float: right;
+}
+
+li{
+    margin-bottom: 3px;
+    list-style-type: none;
+}
+
+ul{
+    padding: 0px;
 }
