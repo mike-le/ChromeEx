@@ -6,7 +6,6 @@ form {
 }
 
 input, textarea {
-    width: 300px;
 }
 
 input#save {
@@ -19,4 +18,9 @@ input#save {
 
 #dictionary{
     display: none;
+}
+
+row{
+    float: left;
+    margin-top: 5px;
 }

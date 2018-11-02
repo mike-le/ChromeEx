@@ -7,8 +7,20 @@ getValue(function (items) {
     for (var key in items) {
         if (items.hasOwnProperty(key)) {
             var li = document.createElement("li");  
-            li.innerHTML = key + " -> " + items[key];
-            ul.appendChild(li);
+            var span = document.createElement("span");
+            li.innerHTML = key + ": " + items[key];
+            li.className = "row";
+
+            var label = document.createElement("label");
+            var input = document.createElement("input");
+            input.type = "checkbox";
+            input.className = "checkbox";
+            
+            
+            label.appendChild(input);
+            li.appendChild(label);
+            span.appendChild(li);
+            ul.appendChild(span);
         }
     }
 }); 
