@@ -1,11 +1,19 @@
+body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.header{
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+
 form {
-    min-width: 300px;
+    min-width: 200px;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
     font-size: 12px;
-}
-
-input, textarea {
 }
 
 input#save {
@@ -38,4 +46,21 @@ li{
 
 ul{
     padding: 0px;
+    margin-top: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
