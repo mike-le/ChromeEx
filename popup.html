@@ -15,13 +15,19 @@
             <input type="text" id="new" name="new" class="input" value="" autocomplete="off"/>
         </p>
         <p>
-            <button value="remove" id="remove">Show All</button>
+            <button value="display" id="display">Show All</button>
             <button type="submit" value="Submit" id="submit">Submit</button>
         </p>
     </form>
     <div id="dictionary">
-        <script src="remove.js"></script>
+        <form id="removeSelectedWord">
+            <script src="display.js"></script>
+        </form>
+        <p>
+            <button value="remove" id="remove">Remove Selected</button>
+        </p>
     </div>  
+    <script src="remove.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>
