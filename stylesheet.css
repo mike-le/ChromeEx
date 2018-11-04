@@ -24,13 +24,17 @@ input#save {
     font-weight: bold; width: auto;
 }
 
+.input{
+    width: 95%;
+}
+
 #submit{
     position: relative; float: right;
 }
 
 #dictionary{
     max-height: 0px;
-    overflow:auto;
+    overflow: auto;
 
     /* Dropdown animation */
     -webkit-transition: all 0.3s;
