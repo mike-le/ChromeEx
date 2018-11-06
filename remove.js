@@ -1,7 +1,7 @@
 document.getElementById("remove").addEventListener("click", deleteWords);
 
 function deleteWords(){
-    var checkedValue = null; 
+    var checkedValue = []; 
     var inputElements = document.getElementsByClassName('wordCheckbox');
     for(var i=0; inputElements[i]; i++){
         if(inputElements[i].checked){
@@ -9,16 +9,18 @@ function deleteWords(){
         }
     }
 
-    getValue(function (items) {
-        for (var key in items) {
-            if (items.hasOwnProperty(key) && checkedValue.indexOf(key) != -1) {
-                //insert remove logic
-            }
-        }
-    }); 
-
+    removeValue(checkedValue, function (items){
+        getValue(function (items) {
+            $.each(items, function(index, value){
+            });
+        }); 
+    });
 }
 
-function getValue(word, callback) {
-	chrome.storage.sync.get(word, callback);
+function getValue(callback) {
+	chrome.storage.sync.get(callback);
+}
+
+function removeValue(selected, callback){
+    chrome.storage.sync.remove(selected, callback);
 }

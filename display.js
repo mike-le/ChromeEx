@@ -9,13 +9,13 @@ getValue(function (items) {
             var li = document.createElement("li");  
             var span = document.createElement("span");
             li.innerHTML = key + ": " + items[key];
-            li.value = key;
             li.className = "row";
 
             var label = document.createElement("label");
             var input = document.createElement("input");
             input.type = "checkbox";
             input.className = "wordCheckbox";
+            input.value = key;
             label.id = "checkbox";
             
             
