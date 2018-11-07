@@ -32,6 +32,10 @@ input#save {
     position: relative; float: right;
 }
 
+#remove{
+    position: relative; float: right;
+}
+
 #dictionary{
     max-height: 0px;
     overflow: auto;
