@@ -15,6 +15,8 @@ function deleteWords(){
             });
         }); 
     });
+    //should add two-way data-binding, unecessary session close
+    close();
 }
 
 function getValue(callback) {
