@@ -12,7 +12,8 @@
       "tabs",
       "http://*/*",
       "https://*/*",
-      "storage"
+      "storage",
+      "contextMenus"
     ],
     "content_scripts": 
     [
@@ -21,6 +22,9 @@
         "js": ["content_script.js"],
         "run_at": "document_end"
       }
-    ]
+    ],
+    "background": {
+      "scripts": ["context_menu.js"]
+    }
 
 }
