@@ -30,6 +30,7 @@ function handleText(textNode) {
 	getValue(v, function (word) {
 		if(word.hasOwnProperty(v)){
 			var regex = new RegExp(v,"gi");
+			var value = v;
 			v = v.replace(regex, word[v]);
 			textNode.nodeValue = v;
 		}
