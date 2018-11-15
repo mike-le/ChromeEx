@@ -4,8 +4,7 @@ function getword(info,tab) {
       url: "http://www.google.com/search?q=" + info.selectionText
     });
   }
-
-var value = "budo";
+/*
 getValue(function (items) {
   for (var key in items){
     if (items[key] == value) {
@@ -20,4 +19,4 @@ getValue(function (items) {
 
 function getValue(callback) {
   chrome.storage.sync.get(null, callback);
-}
+}*/
