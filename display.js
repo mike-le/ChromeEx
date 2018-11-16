@@ -34,10 +34,10 @@ function showWords(){
         if(Object.keys(items).length > 0){
             if (x.style.opacity != 1) {
                 x.style.opacity = 1;
-                x.style.minHeight = "200px";
+                x.style.maxHeight = "200px";
             } else {
                 x.style.opacity = 0;
-                x.style.minHeight = "0px";
+                x.style.maxHeight = "0px";
             }
         }
     }); 
