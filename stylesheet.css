@@ -2,7 +2,7 @@
 
 body{
     margin-top: 0px;
-    margin-bottom: 0px;
+    max-width: 200px;
 }
 
 .header{
