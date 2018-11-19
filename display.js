@@ -2,6 +2,14 @@ document.getElementById("display").addEventListener("click", showWords);
 
 var ul = document.createElement("ul");
 document.getElementById("dictionary").appendChild(ul);
+var firstColHeader = document.createElement("span");
+var secondColHeader = document.createElement("span");
+firstColHeader.textContent = "English";
+secondColHeader.textContent = "Japanese";
+firstColHeader.id = "firstColHeader";
+secondColHeader.id = "secondColHeader";
+ul.appendChild(firstColHeader);
+ul.appendChild(secondColHeader);
 
 getValue(function (items) {
     for (var key in items) {

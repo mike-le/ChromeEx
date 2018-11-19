@@ -13,6 +13,16 @@ body{
     font-weight: bold;
 }
 
+#firstColHeader{
+    font-weight: bold;
+}
+
+#secondColHeader{
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+}
+
 form {
     min-width: 200px;
     overflow-x: hidden;
