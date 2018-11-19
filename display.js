@@ -8,7 +8,14 @@ getValue(function (items) {
         if (items.hasOwnProperty(key)) {
             var li = document.createElement("li");  
             var span = document.createElement("span");
-            li.innerHTML = key + ": " + items[key];
+            var firstCol = document.createElement("span");
+            var secondCol = document.createElement("span");
+
+            firstCol.textContent = "" + key;
+            secondCol.textContent = "" + items[key];
+            firstCol.className = "key";
+            secondCol.className = "value";
+            //li.innerHTML = key + ": " + items[key];
             li.className = "row";
 
             var label = document.createElement("label");
@@ -18,8 +25,9 @@ getValue(function (items) {
             input.value = key;
             label.id = "checkbox";
             
-            
             label.appendChild(input);
+            li.appendChild(firstCol);
+            li.appendChild(secondCol);            
             li.appendChild(label);
             span.appendChild(li);
             ul.appendChild(span);

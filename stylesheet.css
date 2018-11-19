@@ -63,6 +63,11 @@ li{
     list-style-type: none;
 }
 
+.value{
+    position: relative;
+    left: 20px;
+}
+
 ul{
     padding: 0px;
     margin-top: 0px;
