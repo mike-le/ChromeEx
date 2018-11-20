@@ -15,12 +15,12 @@ body{
 
 #firstColHeader{
     font-weight: bold;
+    display: inline-block;
+    width: 80px;
 }
 
 #secondColHeader{
     font-weight: bold;
-    position: relative;
-    left: 20px;
 }
 
 form {
@@ -48,6 +48,7 @@ input#save {
 
 #dictionary{
     max-height: 0px;
+    max-width: 198px;
     overflow: auto;
 
     /* Dropdown animation */
@@ -73,9 +74,9 @@ li{
     list-style-type: none;
 }
 
-.value{
-    position: relative;
-    left: 20px;
+.key{
+    display: inline-block;
+    width: 80px;
 }
 
 ul{

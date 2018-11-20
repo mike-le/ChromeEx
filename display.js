@@ -23,7 +23,6 @@ getValue(function (items) {
             secondCol.textContent = "" + items[key];
             firstCol.className = "key";
             secondCol.className = "value";
-            //li.innerHTML = key + ": " + items[key];
             li.className = "row";
 
             var label = document.createElement("label");
