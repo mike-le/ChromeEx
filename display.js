@@ -2,14 +2,7 @@ document.getElementById("display").addEventListener("click", showWords);
 
 var ul = document.createElement("ul");
 document.getElementById("dictionary").appendChild(ul);
-var firstColHeader = document.createElement("span");
-var secondColHeader = document.createElement("span");
-firstColHeader.textContent = "English";
-secondColHeader.textContent = "Japanese";
-firstColHeader.id = "firstColHeader";
-secondColHeader.id = "secondColHeader";
-ul.appendChild(firstColHeader);
-ul.appendChild(secondColHeader);
+createHeaders(ul);
 
 getValue(function (items) {
     for (var key in items) {
@@ -18,18 +11,12 @@ getValue(function (items) {
             var span = document.createElement("span");
             var firstCol = document.createElement("span");
             var secondCol = document.createElement("span");
-
-            firstCol.textContent = "" + key;
-            secondCol.textContent = "" + items[key];
-            firstCol.className = "key";
-            secondCol.className = "value";
-            li.className = "row";
-
+            
+            populateTable(li, firstCol, secondCol, key, items[key]);
+            
             var label = document.createElement("label");
             var input = document.createElement("input");
             input.type = "checkbox";
-            input.className = "wordCheckbox";
-            input.value = key;
             label.id = "checkbox";
             
             label.appendChild(input);
@@ -61,3 +48,23 @@ function showWords(){
 function getValue(callback) {
 	chrome.storage.sync.get(null, callback);
 }
+
+function populateTable(li, firstCol, secondCol, key, value){
+    firstCol.textContent = key;
+    secondCol.textContent = value;
+    firstCol.className = "key";
+    secondCol.className = "value";
+    li.className = "row";
+}
+
+function createHeaders(ul){
+    var firstColHeader = document.createElement("span");
+    var secondColHeader = document.createElement("span");
+    firstColHeader.textContent = "English";
+    secondColHeader.textContent = "Japanese";
+    firstColHeader.id = "firstColHeader";
+    secondColHeader.id = "secondColHeader";
+    ul.appendChild(firstColHeader);
+    ul.appendChild(secondColHeader);
+}
+
