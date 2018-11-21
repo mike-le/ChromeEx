@@ -1,10 +1,7 @@
 document.getElementById("display").addEventListener("click", showWords);
 
-var ul = document.createElement("ul");
-document.getElementById("dictionary").appendChild(ul);
-createHeaders(ul);
-
 getValue(function (items) {
+    var ul = document.getElementById("list");
     for (var key in items) {
         if (items.hasOwnProperty(key)) {
             var li = document.createElement("li");  
@@ -56,15 +53,3 @@ function populateTable(li, firstCol, secondCol, key, value){
     secondCol.className = "value";
     li.className = "row";
 }
-
-function createHeaders(ul){
-    var firstColHeader = document.createElement("span");
-    var secondColHeader = document.createElement("span");
-    firstColHeader.textContent = "English";
-    secondColHeader.textContent = "Japanese";
-    firstColHeader.id = "firstColHeader";
-    secondColHeader.id = "secondColHeader";
-    ul.appendChild(firstColHeader);
-    ul.appendChild(secondColHeader);
-}
-

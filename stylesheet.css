@@ -16,7 +16,7 @@ body{
 #firstColHeader{
     font-weight: bold;
     display: inline-block;
-    width: 80px;
+    width: 77px;
 }
 
 #secondColHeader{
@@ -48,7 +48,6 @@ input#save {
 
 #dictionary{
     max-height: 0px;
-    max-width: 198px;
     overflow: auto;
 
     /* Dropdown animation */
@@ -70,13 +69,13 @@ row{
 }
 
 li{
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     list-style-type: none;
 }
 
 .key{
     display: inline-block;
-    width: 80px;
+    width: 94px;
 }
 
 ul{
