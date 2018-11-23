@@ -20,7 +20,6 @@ function walk(node)
 
 		case 3: // Text node
 			handleText(node);
-			//contextMenu(node);
 			break;
 	}
 }
@@ -35,16 +34,18 @@ function handleText(textNode) {
 			textNode.nodeValue = key;
 		}
 	}); 
+	contextMenu(textNode);
 }
 
 function contextMenu(textNode){
+	var value = textNode.value;
 	getValue(null, function (items) {
 		for (var key in items){
-			if (items[key] == textNode.nodeValue) {
+			if (items[key] == value) {
+			alert("meg");
 			chrome.contextMenus.create({
 				title: "Kotoba: " + key, 
-				contexts:["selection"], 
-				onclick: alert("test")
+				contexts:["selection"]
 			});
 			}    
 		}

@@ -4,6 +4,7 @@ function getword(info,tab) {
       url: "http://www.google.com/search?q=" + info.selectionText
     });
   }
+
 /*
 getValue(function (items) {
   for (var key in items){
