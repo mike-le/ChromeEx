@@ -1,3 +1,12 @@
+document.addEventListener("mousedown", function(event){
+    var selection = window.getSelection().toString();
+    if(selection.match("grape")) {
+        chrome.extension.sendRequest({cmd: "create_menu"});
+    } else {
+        chrome.extension.sendRequest({cmd: "delete_menu"});
+    }
+}, true); 
+
 walk(document.body);
 
 function walk(node) 
@@ -32,22 +41,6 @@ function handleText(textNode) {
 			var regex = new RegExp(key,"gi");
 			key = key.replace(regex, word[key]);
 			textNode.nodeValue = key;
-		}
-	}); 
-	contextMenu(textNode);
-}
-
-function contextMenu(textNode){
-	var value = textNode.value;
-	getValue(null, function (items) {
-		for (var key in items){
-			if (items[key] == value) {
-			alert("meg");
-			chrome.contextMenus.create({
-				title: "Kotoba: " + key, 
-				contexts:["selection"]
-			});
-			}    
 		}
 	}); 
 }
