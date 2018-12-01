@@ -14,7 +14,6 @@ function addNewWord() {
 
     chrome.storage.sync.set(save);
     //should add alert after submission, unecessary session close
-    close();
     return true;
 } 
     
