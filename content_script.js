@@ -12,7 +12,6 @@ walk(document.body);
 function walk(node) 
 {
 	var child, next;
-
 	switch ( node.nodeType )  
 	{
 		case 1:  // Element
@@ -35,36 +34,18 @@ function walk(node)
 
 function handleText(textNode) {
 	var key = textNode.nodeValue;
-	var hasWord = searchNode(textNode.innerHTML);
-
-	console.log(key);
-	if(hasWord) alert("here");
-	console.log("Search: " + hasWord);
-
-	getValue(key, function (word) {
-		if(word.hasOwnProperty(key)){
-			var regex = new RegExp(key,"gi");
-			key = key.replace(regex, word[key]);
-			textNode.nodeValue = key;
+	var text = String(key);
+	getAll(function (items) {
+		for (var word in items) {
+			if(text.indexOf(word) !== -1){
+				var regex = new RegExp(word,"gi");
+				key = key.replace(regex, items[word]);
+				textNode.nodeValue = key;	
+			}
 		}
 	}); 
-}
-
-function getValue(word, callback) {
-	chrome.storage.sync.get(word, callback);
 }
 
 function getAll(callback) {
 	chrome.storage.sync.get(null, callback);
-}
-
-function searchNode(node){
-	getAll(function (items) {
-		for (var key in items) {
-			if(node.indexOf(key) != 1){
-				return true;	
-			}
-		}
-	}); 
-	return false;
 }
