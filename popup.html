@@ -31,21 +31,6 @@
         </form>
         <button value="remove" id="remove">Remove Selected</button>
     </div>  
-    <script>
-        chrome.extension.onRequest.addListener(function(request) {
-            if(request.cmd == "create_menu") {
-                chrome.contextMenus.removeAll(function() {
-                    chrome.contextMenus.create({
-                        "title" : "Kotoba",
-                        "type" : "normal",
-                        "contexts" : ["selection"]
-                    });
-                });
-            } else if(request.cmd == "delete_menu") {
-                chrome.contextMenus.removeAll();
-            }
-        });
-    </script>
     <script src="remove.js"></script>
     <script src="popup.js"></script>
 </body>

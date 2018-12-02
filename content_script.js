@@ -35,6 +35,11 @@ function walk(node)
 
 function handleText(textNode) {
 	var key = textNode.nodeValue;
+	var hasWord = searchNode(textNode.innerHTML);
+
+	console.log(key);
+	if(hasWord) alert("here");
+	console.log("Search: " + hasWord);
 
 	getValue(key, function (word) {
 		if(word.hasOwnProperty(key)){
@@ -47,4 +52,19 @@ function handleText(textNode) {
 
 function getValue(word, callback) {
 	chrome.storage.sync.get(word, callback);
+}
+
+function getAll(callback) {
+	chrome.storage.sync.get(null, callback);
+}
+
+function searchNode(node){
+	getAll(function (items) {
+		for (var key in items) {
+			if(node.indexOf(key) != 1){
+				return true;	
+			}
+		}
+	}); 
+	return false;
 }
