@@ -21,6 +21,12 @@ body{
 
 #secondColHeader{
     font-weight: bold;
+    display: inline-block;
+    width: 70px;
+}
+
+#thirdColHeader{
+    font-weight: bold;
 }
 
 form {

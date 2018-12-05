@@ -38,7 +38,7 @@ function handleText(textNode) {
 	getAll(function (items) {
 		for (var word in items) {
 			if(text.indexOf(word) !== -1){
-				var regex = new RegExp("\\b" + word + "\\b","gi"); //word surrounded by whitespace
+				var regex = new RegExp("\\b" + word + "\\b","g"); 
 				key = key.replace(regex, items[word]);
 				textNode.nodeValue = key;	
 			}
