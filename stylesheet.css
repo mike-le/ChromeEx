@@ -16,7 +16,7 @@ body{
 #firstColHeader{
     font-weight: bold;
     display: inline-block;
-    width: 77px;
+    width: 65px;
 }
 
 #secondColHeader{
@@ -70,10 +70,6 @@ row{
     margin-top: 5px;
 }
 
-#checkbox{
-    float: right;
-}
-
 li{
     margin-bottom: 4px;
     list-style-type: none;
@@ -81,7 +77,12 @@ li{
 
 .key{
     display: inline-block;
-    width: 94px;
+    width: 82px;
+}
+
+.value{
+    display: inline-block;
+    width: 70px;
 }
 
 ul{
