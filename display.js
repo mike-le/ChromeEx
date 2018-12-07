@@ -34,11 +34,11 @@ function showWords(){
     getValue(function (items) {
         if(Object.keys(items).length > 0){
             if (x.style.opacity != 1) {
-                x.style.opacity = 1;
                 x.style.maxHeight = "200px";
+                x.style.opacity = 1;
             } else {
-                x.style.opacity = 0;
                 x.style.maxHeight = "0px";
+                x.style.opacity = 0;
             }
         }
     }); 
