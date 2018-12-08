@@ -90,6 +90,48 @@ ul{
     margin-top: 0px;
 }
 
+#snackbar {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: rgb(35, 189, 86); /* Black background color */
+    color: #fff; /* White text color */
+    font-weight: bold;
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 8px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 0px;
+    top: 30px; /* 30px from the bottom */
+  }
+  
+  #snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 1.5s;
+    animation: fadein 0.5s, fadeout 0.5s 1.5s;
+  }
+  
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadeout {
+from {top: 30px; opacity: 1;} 
+to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+from {top: 30px; opacity: 1;} 
+to {top: 0; opacity: 0;}
+}
+
+@-webkit-keyframes fadein {
+from {top: 0; opacity: 0;} 
+to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+from {top: 0; opacity: 0;}
+to {top: 30px; opacity: 1;}
+}
+
 /* Scroll bar animations */
 ::-webkit-scrollbar {
     width: 5px;

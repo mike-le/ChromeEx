@@ -8,6 +8,7 @@ function addNewWord() {
     var orgWord = document.getElementById('org').value;
     var newWord = document.getElementById('new').value;
     
+    if(!orgWord || !newWord) return false;
     var save = {};  
     save[decapitalize(orgWord)] = decapitalize(newWord);
     if(plural) save[capitalize(orgWord)] = capitalize(newWord);
@@ -15,7 +16,7 @@ function addNewWord() {
     if(cap && plural) save[capitalize(orgWord+'s')] = capitalize(newWord);
 
     chrome.storage.sync.set(save);
-    //should add alert after submission, unecessary session close
+    showSnackBar(orgWord + " -> " + newWord + " added successfully");
     return true;
 } 
     
@@ -25,4 +26,11 @@ function capitalize(string) {
 
 function decapitalize(string) {
     return string.charAt(0).toLowerCase() + string.slice(1);
+}
+
+function showSnackBar(message){
+    var x = document.getElementById("snackbar");
+    x.innerHTML = message;
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
 }
