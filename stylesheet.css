@@ -102,7 +102,7 @@ ul{
     position: fixed; /* Sit on top of the screen */
     z-index: 1; /* Add a z-index if needed */
     left: 0px;
-    top: 30px; /* 30px from the bottom */
+    bottom: 0px; /* 30px from the bottom */
   }
   
   #snackbar.show {
@@ -113,23 +113,23 @@ ul{
   
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadeout {
-from {top: 30px; opacity: 1;} 
-to {top: 0; opacity: 0;}
+from {padding: 8px; opacity: 1;} 
+to {padding: 0px; opacity: 0;}
 }
 
 @keyframes fadeout {
-from {top: 30px; opacity: 1;} 
-to {top: 0; opacity: 0;}
+from {padding: 8px; opacity: 1;} 
+to {padding: 0px; opacity: 0;}
 }
 
 @-webkit-keyframes fadein {
-from {top: 0; opacity: 0;} 
-to {top: 30px; opacity: 1;}
+from {padding: 0px; opacity: 0;} 
+to {padding: 8px; opacity: 1;}
 }
 
 @keyframes fadein {
-from {top: 0; opacity: 0;}
-to {top: 30px; opacity: 1;}
+from {padding: 0px; opacity: 0;}
+to {padding: 8px; opacity: 1;}
 }
 
 /* Scroll bar animations */
