@@ -15,8 +15,13 @@ function deleteWords(){
             });
         }); 
     });
-    //should add two-way data-binding, unecessary session close
-    close();
+
+    if(checkedValue.length > 1){
+        showSnackBar(checkedValue.length + " words removed successfully", "#F73A3A");
+    } else {
+        showSnackBar(checkedValue.length + " word removed successfully", "#F73A3A");
+    }
+    return true;
 }
 
 function getValue(callback) {
@@ -26,3 +31,4 @@ function getValue(callback) {
 function removeValue(selected, callback){
     chrome.storage.sync.remove(selected, callback);
 }
+

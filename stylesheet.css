@@ -93,16 +93,15 @@ ul{
 #snackbar {
     visibility: hidden;
     min-width: 200px;
-    background-color: rgb(35, 189, 86); /* Black background color */
-    color: #fff; /* White text color */
+    background-color: rgb(35, 189, 86); 
+    color: #fff; 
     font-weight: bold;
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 8px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
+    text-align: center; 
+    padding: 8px; 
+    position: fixed; 
+    z-index: 1;
     left: 0px;
-    bottom: 0px; /* 30px from the bottom */
+    bottom: 0px; 
   }
   
   #snackbar.show {

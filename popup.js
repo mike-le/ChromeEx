@@ -16,7 +16,7 @@ function addNewWord() {
     if(cap && plural) save[capitalize(orgWord+'s')] = capitalize(newWord);
 
     chrome.storage.sync.set(save);
-    showSnackBar(orgWord + " -> " + newWord + " added successfully");
+    showSnackBar(orgWord + " -> " + newWord + " added successfully", "#1DDF16");
     return true;
 } 
     
@@ -28,8 +28,9 @@ function decapitalize(string) {
     return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
-function showSnackBar(message){
+function showSnackBar(message, color){
     var x = document.getElementById("snackbar");
+    x.style.backgroundColor = color; 
     x.innerHTML = message;
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
