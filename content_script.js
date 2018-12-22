@@ -1,12 +1,3 @@
-document.addEventListener("mousedown", function(event){
-    var selection = window.getSelection().toString();
-    if(selection.match("grape")) {
-        chrome.extension.sendRequest({cmd: "create_menu"});
-    } else {
-        chrome.extension.sendRequest({cmd: "delete_menu"});
-    }
-}, true); 
-
 walk(document.body);
 
 function walk(node) 
