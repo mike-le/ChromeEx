@@ -90,6 +90,16 @@ ul{
     margin-top: 0px;
 }
 
+#plu{
+    position: relative;
+    left: 40px;
+}
+
+#cap{
+    position: relative;
+    left: 20px;
+}
+
 #snackbar {
     visibility: hidden;
     min-width: 200px;
