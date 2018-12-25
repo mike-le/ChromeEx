@@ -30,15 +30,18 @@ getValue(function (items) {
 
 function showWords(){
     event.preventDefault();
+    var displayButton = document.getElementById("display");
     var x = document.getElementById("dictionary");
     getValue(function (items) {
         if(Object.keys(items).length > 0){
             if (x.style.opacity != 1) {
                 x.style.maxHeight = "200px";
                 x.style.opacity = 1;
+                displayButton.textContent = "-";
             } else {
                 x.style.maxHeight = "0px";
                 x.style.opacity = 0;
+                displayButton.textContent = "Show All";
             }
         }
     }); 
