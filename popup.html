@@ -14,7 +14,7 @@
     <form id="addNewWord">
         <p>
             <label for="fromWord">English Word</label><br/>
-            <input type="text" id="fromWord" name="fromWord" class="input" value="" autocomplete="off" />
+            <input type="text" id="fromWord" class="input" value="" autocomplete="off" />
             <span >
                 <label id="capCheck">Capitalize <input class="checkbox" type="checkbox"/></label>
                 <label id="pluralCheck">Plural <input class="checkbox" type="checkbox"/></label>
@@ -22,11 +22,11 @@
         </p>
         <p>
             <label for="toWord">Japanese Word</label><br/>
-            <input type="text" id="toWord" name="toWord" class="input" value="" autocomplete="off"/>
+            <input type="text" id="toWord" class="input" value="" autocomplete="off"/>
         </p>
         <p>
             <button value="display" id="display">Show All</button>
-            <button type="submit" value="Submit" id="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
         </p>
     </form>
     <div id="dictionary">
@@ -40,7 +40,7 @@
                 <script src="src/display.js"></script>
             </ul>    
         </form>
-        <button value="remove" id="remove">Remove Selected</button>
+        <button id="remove">Remove Selected</button>
     </div>  
     <div id="snackbar">Successful</div>
     <!-- Optional JavaScript -->
