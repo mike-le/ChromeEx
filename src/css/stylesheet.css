@@ -41,7 +41,7 @@ input#save {
 }
 
 .input{
-    width: 95%;
+    width: 100%;
 }
 
 #submit{
@@ -55,6 +55,7 @@ input#save {
 #dictionary{
     max-height: 0px;
     overflow: auto;
+    margin-left: 5px;
 
     /* Dropdown animation */
     -webkit-transition: all 0.3s;
@@ -79,12 +80,12 @@ li{
 
 .key{
     display: inline-block;
-    width: 82px;
+    width: 67px;
 }
 
 .value{
     display: inline-block;
-    width: 70px;
+    width: 86px;
 }
 
 ul{
@@ -93,20 +94,20 @@ ul{
 }
 
 p{
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 label{
     margin-bottom: 0px;
 }
 
-#plu{
+#pluralCheck{
     position: relative;
     left: 40px;
 }
 
-#cap{
+#capCheck{
     position: relative;
     left: 20px;
 }
