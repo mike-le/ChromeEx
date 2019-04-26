@@ -19,12 +19,11 @@
     [
       {
         "matches": ["*://*/*"],
-        "js": ["content_script.js"],
+        "js": ["src/content_script.js"],
         "run_at": "document_end"
       }
     ],
     "background": {
-      "scripts": ["context_menu.js"]
+      "scripts": ["src/context_menu.js"]
     }
-
 }

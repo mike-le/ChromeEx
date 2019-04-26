@@ -3,20 +3,20 @@ document.getElementById("submit").addEventListener("click", addNewWord);
 function addNewWord() {
     event.preventDefault();
     
-    var cap = document.getElementById('cap').checked;
-    var plural = document.getElementById('plu').checked;
-    var orgWord = document.getElementById('org').value;
-    var newWord = document.getElementById('new').value;
+    var cap = document.getElementById('capCheck').checked;
+    var plural = document.getElementById('pluralCheck').checked;
+    var fromWord = document.getElementById('fromWord').value;
+    var toWord = document.getElementById('toWord').value;
     
-    if(!orgWord || !newWord) return false;
+    if(!fromWord || !toWord) return false;
     var save = {};  
-    save[decapitalize(orgWord)] = decapitalize(newWord);
-    if(plural) save[capitalize(orgWord)] = capitalize(newWord);
-    if(cap) save[decapitalize(orgWord+'s')] = decapitalize(newWord);
-    if(cap && plural) save[capitalize(orgWord+'s')] = capitalize(newWord);
+    save[decapitalize(fromWord)] = decapitalize(toWord);
+    if(plural) save[capitalize(fromWord)] = capitalize(toWord);
+    if(cap) save[decapitalize(fromWord+'s')] = decapitalize(toWord);
+    if(cap && plural) save[capitalize(fromWord+'s')] = capitalize(toWord);
 
     chrome.storage.sync.set(save);
-    showSnackBar(orgWord + " -> " + newWord + " added successfully", "#1DDF16");
+    showSnackBar(fromWord + " -> " + toWord + " added successfully", "#1DDF16");
     return true;
 } 
     
