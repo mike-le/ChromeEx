@@ -2,4 +2,5 @@
 
 # compiled output
 /node_modules
-
+/src/js/jquery
+/src/js/popper.js

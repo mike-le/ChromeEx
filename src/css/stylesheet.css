@@ -49,6 +49,7 @@ input#save {
 }
 
 #remove{
+    font-size: 12px;
     position: relative; float: right;
 }
 
