@@ -41,7 +41,7 @@ function showWords(){
             } else {
                 x.style.maxHeight = "0px";
                 x.style.opacity = 0;
-                displayButton.textContent = "Show All";
+                displayButton.textContent = "+";
             }
         }
     }); 
