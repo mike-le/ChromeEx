@@ -16,6 +16,7 @@ function addNewWord() {
     if(cap && plural) save[capitalize(fromWord+'s')] = capitalize(toWord);
     
     chrome.storage.sync.set(save);
+    refreshDictionary();
     showSnackBar(fromWord + " -> " + toWord + " added successfully", "#1DDF16");
     return true;
 } 

@@ -16,11 +16,8 @@ function deleteWords(){
         }); 
     });
 
-    if(checkedValue.length > 1){
-        showSnackBar(checkedValue.length + " words removed successfully", "#F73A3A");
-    } else {
-        showSnackBar(checkedValue.length + " word removed successfully", "#F73A3A");
-    }
+    var plural = checkValue.length > 1 ? "s" : "";
+    showSnackBar(checkedValue.length + " word" + plural + " removed successfully", "#F73A3A");
     return true;
 }
 

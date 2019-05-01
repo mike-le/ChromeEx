@@ -1,32 +1,36 @@
 document.getElementById("display").addEventListener("click", showWords);
 
-getValue(function (items) {
-    var ul = document.getElementById("list");
-    for (var key in items) {
-        if (items.hasOwnProperty(key)) {
-            var li = document.createElement("li");  
-            var span = document.createElement("span");
-            var firstCol = document.createElement("span");
-            var secondCol = document.createElement("span");
-            
-            populateTable(li, firstCol, secondCol, key, items[key]);
-            
-            var label = document.createElement("label");
-            var input = document.createElement("input");
-            input.type = "checkbox";
-            input.className = "wordCheckbox";
-            input.value = key;
-            label.id = "checkbox";
-            
-            label.appendChild(input);
-            li.appendChild(firstCol);
-            li.appendChild(secondCol);            
-            li.appendChild(label);
-            span.appendChild(li);
-            ul.appendChild(span);
+refreshDictionary();
+
+function refreshDictionary(){
+    getDictionary(function (items) {
+        var ul = document.getElementById("list");
+        for (var key in items) {
+            if (items.hasOwnProperty(key)) {
+                var li = document.createElement("li");  
+                var span = document.createElement("span");
+                var firstCol = document.createElement("span");
+                var secondCol = document.createElement("span");
+                
+                populateTable(li, firstCol, secondCol, key, items[key]);
+                
+                var label = document.createElement("label");
+                var input = document.createElement("input");
+                input.type = "checkbox";
+                input.className = "wordCheckbox";
+                input.value = key;
+                label.id = "checkbox";
+                
+                label.appendChild(input);
+                li.appendChild(firstCol);
+                li.appendChild(secondCol);            
+                li.appendChild(label);
+                span.appendChild(li);
+                ul.appendChild(span);
+            }
         }
-    }
-}); 
+    });
+}
 
 function showWords(){
     event.preventDefault();
@@ -47,7 +51,7 @@ function showWords(){
     }); 
 }
 
-function getValue(callback) {
+function getDictionary(callback) {
 	chrome.storage.sync.get(null, callback);
 }
 
