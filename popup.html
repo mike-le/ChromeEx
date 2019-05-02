@@ -17,15 +17,21 @@
     <a class="header">Kotoba<i id="settings" class="fas fa-cog"></i></a>
     <form id="addNewWord">
         <p>
-            <label for="fromWord">English Word</label><br/>
+            <label for="fromWord"><b>English Word</b></label><br/>
             <input type="text" id="fromWord" class="input" value="" autocomplete="off" />
             <span >
-                <label id="capCheck">Capitalize <input class="checkbox" type="checkbox"/></label>
-                <label id="pluralCheck">Plural <input class="checkbox" type="checkbox"/></label>
+                <label id="capitalBox">
+                    Capitalize 
+                    <input id="capCheck" class="checkbox" type="checkbox"/>
+                </label>
+                <label id="pluralBox">
+                    Plural 
+                    <input id="pluralCheck"class="checkbox" type="checkbox"/>
+                </label>
             </span>
         </p>
         <p>
-            <label for="toWord">Japanese Word</label><br/>
+            <label for="toWord"><b>Japanese Word</b></label><br/>
             <input type="text" id="toWord" class="input" value="" autocomplete="off"/>
         </p>
         <p>

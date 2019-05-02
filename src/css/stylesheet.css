@@ -49,12 +49,29 @@ input#save {
 }
 
 #submit{
-    position: relative; float: right;
+    position: relative; 
+    float: right;
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    color: white;
+    outline: none;
 }
 
 #remove{
     font-size: 12px;
-    position: relative; float: right;
+    position: relative; 
+    float: right;
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    color: white;
+    outline: none;
+}
+
+#display{
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    color: white;
+    outline: none;
 }
 
 #dictionary{
@@ -107,12 +124,12 @@ label{
     margin-bottom: 0px;
 }
 
-#pluralCheck{
+#pluralBox{
     position: relative;
     left: 40px;
 }
 
-#capCheck{
+#capitalBox{
     position: relative;
     left: 20px;
 }
