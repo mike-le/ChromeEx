@@ -3,6 +3,7 @@
 body{
     margin-top: 0px;
     max-width: 200px;
+    min-width: 200px;
 }
 
 .header{
@@ -78,6 +79,8 @@ input#save {
     max-height: 0px;
     overflow: auto;
     margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 
     /* Dropdown animation */
     -webkit-transition: all 0.3s;
