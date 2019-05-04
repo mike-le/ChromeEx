@@ -40,10 +40,12 @@ function showWords(){
         if(Object.keys(items).length > 0){
             if (x.style.opacity != 1) {
                 x.style.maxHeight = "200px";
+                x.style.marginBottom = "5px";
                 x.style.opacity = 1;
                 displayButton.textContent = "-";
             } else {
                 x.style.maxHeight = "0px";
+                x.style.marginBottom = "0px";
                 x.style.opacity = 0;
                 displayButton.textContent = "+";
             }
