@@ -23,6 +23,10 @@ body{
     color: #4d90fe;
 }
 
+#settings:hover{
+    opacity: 75%;
+}
+
 #firstColHeader{
     font-weight: bold;
     display: inline-block;
